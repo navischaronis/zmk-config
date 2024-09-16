@@ -11,10 +11,10 @@
 
 / {
     macros {
-        new_macro: new_macro {
+        at: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings = <&kp LC(SPACE) &kp LS(NUMBER_2) &kp LC(SPACE)>;
             label = "NEW_MACRO";
         };
     };
