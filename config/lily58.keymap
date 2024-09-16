@@ -8,6 +8,20 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+/ {
+    macros {
+        fn_shift_2_macro {
+            label = "Fn Shift 2";
+            bindings = <
+                &kp FN   // Press and release Fn
+                &kp LSFT // Press and hold Left Shift
+                &kp 2    // Press and release 2
+                &kp FN   // Press and release Fn again
+            >;
+        };
+    };
+};
+
 
 / {
     macros {
