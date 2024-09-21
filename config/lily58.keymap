@@ -11,7 +11,7 @@
 
 / {
     macros {
-        at: new_macro {
+        at2: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -19,6 +19,70 @@
                 <&kp LG(SPACE) &kp LS(NUMBER_2) &kp LG(SPACE)>;
 
             label = "NEW_MACRO";
+        };
+
+        hash3: a1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(SPACE) &kp LS(NUMBER_3) &kp LG(SPACE)>;
+
+            label = "A1";
+        };
+
+        exclamation1: a3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(SPACE) &kp LS(NUMBER_1) &kp LG(SPACE)>;
+
+            label = "A3";
+        };
+
+        dollar4: a4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(SPACE) &kp LS(NUMBER_4) &kp LG(SPACE)>;
+
+            label = "A4";
+        };
+
+        percent5: a5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LG(SPACE) &kp LS(N5) &kp LG(SPACE)>;
+
+            label = "A5";
+        };
+
+        caret6: a6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(SPACE) &kp LS(NUMBER_6) &kp LG(SPACE)>;
+
+            label = "A6";
+        };
+
+        ampersand_and7: a7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LG(SPACE) &kp LS(N7) &kp LG(SPACE)>;
+
+            label = "A7";
+        };
+
+        asteriks_star8: a8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LG(SPACE) &kp LS(N8) &kp LG(SPACE)>;
+
+            label = "A8";
         };
     };
 
@@ -56,7 +120,7 @@
 &bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                                  &out OUT_TOG     &trans           &trans           &trans                &trans                 &trans
 &trans      &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                                        &kp F6           &kp F7           &kp F8           &kp F9                &kp F10                &trans
 &trans      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5                               &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &kp KP_NUMBER_0        &kp TILDE
-&trans      &kp EXCLAMATION  &at              &kp HASH         &kp DOLLAR       &kp PERCENT      &kp LC(X)    &kp KP_NUMLOCK  &kp CARET        &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
+&trans      &exclamation1    &at2             &hash3           &dollar4         &percent5        &kp LC(X)    &kp KP_NUMLOCK  &caret6          &ampersand_and7  &asteriks_star8  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
                                               &trans           &trans           &trans           &trans       &kp DELETE      &trans           &trans           &trans
             >;
 
