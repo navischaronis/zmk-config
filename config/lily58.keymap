@@ -94,6 +94,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Layer3 {
+            bindings = <&to 3>;
+            key-positions = <36 49>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -148,6 +157,42 @@
 &kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &kp N6            &kp N7     &kp N8    &kp N9    &kp N0     &trans
 &trans     &kp F1  &kp F2  &kp F4   &kp F4   &kp F6                     &mt PAGE_UP HOME  &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT  &mt PAGE_DOWN END
 &trans     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS       &kp MINUS  &equal    &kp LBKT  &kp RBKT   &kp BSLH
+                           &trans   &trans   &trans   &trans    &trans  &trans            &trans     &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        layer_3 {
+            bindings = <
+&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4        &kp N5                              &kp N6  &kp N7         &kp N8     &kp N9   &kp N0    &kp EQUAL
+&kp TAB         &kp Q   &kp W   &kp E         &kp R         &kp T                               &kp Y   &kp U          &kp I      &kp O    &kp P     &kp MINUS
+&kp LCTRL       &kp A   &kp S   &kp D         &kp F         &kp G                               &kp H   &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LEFT_SHIFT  &kp Z   &kp X   &kp C         &kp V         &kp B   &kp LC(C)    &kp LC(V)      &kp N   &kp M          &kp COMMA  &kp DOT  &kp FSLH  &mt LEFT_SHIFT ENTER
+                                &kp LEFT_WIN  &kp LEFT_ALT  &mo 4   &kp SPACE    &kp BACKSPACE  &mo 5   &kp RIGHT_ALT  &kp RGUI
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        layer_4 {
+            bindings = <
+&bt BT_CLR  &bt BT_SEL 0          &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4                                  &out OUT_TOG          &trans           &trans           &trans                &trans                 &trans
+&trans      &kp F1                &kp F2                &kp F3                &kp F4                &kp F5                                        &kp F6                &kp F7           &kp F8           &kp F9                &kp F10                &trans
+&trans      &kp KP_NUMBER_1       &kp KP_NUMBER_2       &kp KP_NUMBER_3       &kp KP_NUMBER_4       &kp KP_NUMBER_5                               &kp KP_NUMBER_6       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &kp KP_NUMBER_0        &kp TILDE
+&trans      &kp RA(LS(NUMBER_1))  &kp RA(LS(NUMBER_2))  &kp LS(RA(NUMBER_3))  &kp LS(RA(NUMBER_4))  &kp LS(RA(N5))   &kp LC(X)    &kp KP_NUMLOCK  &kp LS(RA(NUMBER_6))  &kp LS(RA(N7))   &kp LS(RA(N8))   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
+                                                        &trans                &trans                &trans           &trans       &kp DELETE      &trans                &trans           &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        layer_5 {
+            bindings = <
+&trans     &trans  &trans  &trans   &trans   &trans                     &trans            &trans     &trans         &trans    &trans     &trans
+&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &kp N6            &kp N7     &kp N8         &kp N9    &kp N0     &trans
+&trans     &kp F1  &kp F2  &kp F4   &kp F4   &kp F6                     &mt PAGE_UP HOME  &kp LEFT   &kp DOWN       &kp UP    &kp RIGHT  &mt PAGE_DOWN END
+&trans     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS       &kp MINUS  &kp RA(EQUAL)  &kp LBKT  &kp RBKT   &kp BSLH
                            &trans   &trans   &trans   &trans    &trans  &trans            &trans     &trans
             >;
 
