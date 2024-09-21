@@ -14,7 +14,10 @@
         at: new_macro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(SPACE) &kp LS(NUMBER_2) &kp LC(SPACE)>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(SPACE) &kp LS(NUMBER_2) &kp LG(SPACE)>;
+
             label = "NEW_MACRO";
         };
     };
@@ -51,9 +54,9 @@
 
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3     &bt BT_SEL 4                                  &out OUT_TOG     &trans           &trans           &trans                &trans                 &trans
-&kp F1      &kp F2           &kp F3           &kp F4           &kp F5           &kp F6                                        &kp F7           &kp F8           &kp F9           &kp F10               &kp F11                &kp F12
+&trans      &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                                        &kp F6           &kp F7           &kp F8           &kp F9                &kp F10                &trans
 &trans      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5                               &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &kp KP_NUMBER_0        &kp TILDE
-&trans      &kp EXCLAMATION  &kp AT_SIGN      &kp HASH         &kp DOLLAR       &kp PERCENT      &kp LC(X)    &kp KP_NUMLOCK  &kp CARET        &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
+&trans      &kp EXCLAMATION  &at              &kp HASH         &kp DOLLAR       &kp PERCENT      &kp LC(X)    &kp KP_NUMLOCK  &kp CARET        &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
                                               &trans           &trans           &trans           &trans       &kp DELETE      &trans           &trans           &trans
             >;
 
