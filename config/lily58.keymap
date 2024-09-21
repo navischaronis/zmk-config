@@ -64,7 +64,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LG(SPACE) &kp LS(NUMBER_6) &kp LG(SPACE)>;
+                <&kp LG(SPACE) &kp LS(NUMBER_6) &kp SPACE &kp LG(SPACE)>;
 
             label = "A6";
         };
@@ -83,6 +83,14 @@
             bindings = <&macro_tap>, <&kp LG(SPACE) &kp LS(N8) &kp LG(SPACE)>;
 
             label = "A8";
+        };
+
+        equal: equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&kp LG(SPACE) &equal &kp LG(SPACE)>;
+
+            label = "EQUAL";
         };
     };
 
@@ -136,11 +144,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans     &trans  &trans  &trans   &trans   &trans                     &trans       &trans     &trans     &trans    &trans     &trans
-&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &kp N6       &kp N7     &kp N8     &kp N9    &kp N0     &trans
-&trans     &kp F1  &kp F2  &kp F4   &kp F4   &kp F6                     &trans       &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans
-&trans     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS  &kp MINUS  &kp EQUAL  &kp LBKT  &kp RBKT   &kp BSLH
-                           &trans   &trans   &trans   &trans    &trans  &trans       &trans     &trans
+&trans     &trans  &trans  &trans   &trans   &trans                     &trans            &trans     &trans    &trans    &trans     &trans
+&kp GRAVE  &kp N1  &kp N2  &kp N3   &kp N4   &kp N5                     &kp N6            &kp N7     &kp N8    &kp N9    &kp N0     &trans
+&trans     &kp F1  &kp F2  &kp F4   &kp F4   &kp F6                     &mt PAGE_UP HOME  &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT  &mt PAGE_DOWN END
+&trans     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &kp KP_PLUS       &kp MINUS  &equal    &kp LBKT  &kp RBKT   &kp BSLH
+                           &trans   &trans   &trans   &trans    &trans  &trans            &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
