@@ -92,16 +92,6 @@
 
             label = "EQUAL";
         };
-
-        win_at: win_at {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_tap>,
-                <&kp LEFT_ALT &kp KP_NUMBER_6 &kp KP_NUMBER_4>;
-
-            label = "WIN_AT";
-        };
     };
 
     combos {
@@ -190,7 +180,7 @@
 &bt BT_CLR  &bt BT_SEL 0          &bt BT_SEL 1     &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4                                  &out OUT_TOG          &trans           &trans           &trans                &trans                 &trans
 &trans      &kp F1                &kp F2           &kp F3                &kp F4                &kp F5                                        &kp F6                &kp F7           &kp F8           &kp F9                &kp F10                &trans
 &trans      &kp KP_NUMBER_1       &kp KP_NUMBER_2  &kp KP_NUMBER_3       &kp KP_NUMBER_4       &kp KP_NUMBER_5                               &kp KP_NUMBER_6       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9       &kp KP_NUMBER_0        &kp TILDE
-&trans      &kp RA(LS(NUMBER_1))  &win_at          &kp LS(RA(NUMBER_3))  &kp LS(RA(NUMBER_4))  &kp LS(RA(N5))   &kp LC(X)    &kp KP_NUMLOCK  &kp LS(RA(NUMBER_6))  &kp LS(RA(N7))   &kp LS(RA(N8))   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
+&trans      &kp RA(LS(NUMBER_1))  &kp RA(LS(N2))   &kp LS(RA(NUMBER_3))  &kp LS(RA(NUMBER_4))  &kp LS(RA(N5))   &kp LC(X)    &kp KP_NUMLOCK  &kp LS(RA(NUMBER_6))  &kp LS(RA(N7))   &kp LS(RA(N8))   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
                                                    &trans                &trans                &trans           &trans       &kp DELETE      &trans                &trans           &trans
             >;
 
