@@ -88,7 +88,9 @@
         equal: equal {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LG(SPACE) &equal &kp LG(SPACE)>;
+            bindings =
+                <&macro_tap>,
+                <&kp LG(SPACE) &kp LS(EQUAL) &kp LG(SPACE)>;
 
             label = "EQUAL";
         };
